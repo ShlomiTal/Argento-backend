@@ -1,0 +1,7 @@
+services:
+  - name: argento-pwa-backend
+    buildCommand: npm run build
+    startCommand: npm start
+    env:
+      NODE_ENV: production
+      PORT: 3001
