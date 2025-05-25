@@ -10,6 +10,10 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the Argento Backend API', status: 'running' });
+});
+
 app.use('/market', marketRoutes);
 app.use('/portfolio', portfolioRoutes);
 app.use('/trade', tradeRoutes);
